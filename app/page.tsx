@@ -32,7 +32,7 @@ export default function Home() {
             Go to Dashboard →
           </a>
           <div className="mt-6">
-            <UserButton afterSignOutUrl="/" />
+            <UserButton />
           </div>
         </Show>
 
