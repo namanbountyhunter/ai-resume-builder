@@ -43,10 +43,10 @@ export default function ResumeBuilder() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleArrayChange = (arrayName: string, id: number, field: string, value: string) => {
+  const handleArrayChange = (arrayName: 'experiences' | 'education' | 'projects', id: number, field: string, value: string) => {
     setFormData(prev => ({
       ...prev,
-      [arrayName]: prev[arrayName as keyof typeof prev].map((item: any) =>
+      [arrayName]: prev[arrayName].map((item: any) =>
         item.id === id ? { ...item, [field]: value } : item
       )
     }));
