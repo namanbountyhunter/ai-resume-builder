@@ -9,7 +9,7 @@ import { pdf } from '@react-pdf/renderer';
 import ResumePDF from './ResumePDF';
 
 const groq = new Groq({
-  apiKey: "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",
+  apiKey: process.env.NEXT_PUBLIC_GROQ_API_KEY || "",
   dangerouslyAllowBrowser: true
 });
 
